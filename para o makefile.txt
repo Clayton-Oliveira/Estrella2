@@ -1,0 +1,3 @@
+gcc sequencial -o seq
+mpicc paralelo.c -fopenmp -o paral
+mpirun -map-by node -np 8 --hostfile hosts paral
