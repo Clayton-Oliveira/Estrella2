@@ -17,7 +17,7 @@ int main (){
 	unsigned char **r, **g, **b, **newR, **newG, **newB ;
     clock_t cInit, cFinal;
 
-	file = fopen("gray/5.ppm", "rb");
+	file = fopen("gray/in.ppm", "rb");
 	fseek(file, 2, SEEK_SET);
 	fscanf(file, "%d", &columns);
 	fscanf(file, "%d", &rows);
@@ -97,6 +97,7 @@ int main (){
 	free(newR);
 	free(newG);
 	free(newB);
+	return 0;
 }
 
 /* função que retorna a média de uma componente do pixel utilizando os valores da componente ao redor dela (numa sub matriz 5x5) */

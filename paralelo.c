@@ -42,7 +42,7 @@
 		MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 		
 		if(rank == MASTER ){
-			file = fopen("rgb/1.ppm", "rb");
+			file = fopen("rgb/in.ppm", "rb");
 			fseek(file, 2, SEEK_SET);
 			fscanf(file, "%d", &columns);
 			fscanf(file, "%d", &rows);
